@@ -65,6 +65,8 @@ bool consume(Token **Rest, Token *Tok, char *Str);
 // 词法分析
 Token *tokenizeFile(char *Path);
 
+#define unreachable() error("internal error at %s:%d", __FILE__, __LINE__)
+
 //
 // 生成AST（抽象语法树），语法解析
 //
